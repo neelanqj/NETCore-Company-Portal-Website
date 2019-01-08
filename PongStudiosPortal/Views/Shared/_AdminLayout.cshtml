@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Administration Portal</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    @Html.ActionLink("User Admin", "Index", "SuperAdmin", true)
+                </li>
+                <li>
+                    @Html.ActionLink("Role", "Index", "Role", true)
+                </li>
+                <li>
+                    @Html.ActionLink("Claims", "Index", "Claims", true)
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    @RenderBody()
+</div>
